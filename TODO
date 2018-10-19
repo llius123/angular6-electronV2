@@ -1,0 +1,10 @@
+
+IMPORTANTE:
+    ☐ Añadir siempre un background blanco porque si no, cargara el pdf en negro
+TODO:
+    ✔ Añadido html2canvas por si en algun futuro lo necestio aunque no tiene tiene pinta ya que con jquery y jspdf va de sobra @done(18-10-19 19:31)
+    ☐ Añadir angular material para los inputs.
+    ☐ Crear los objectos factura,direccion etc...
+    ☐ Crear una buena estructura de directorios
+    ☐ Cuando se cree el pdf hacerlo con un ancho y un alto como los pdf normales
+    
