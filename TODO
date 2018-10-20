@@ -1,6 +1,8 @@
 
 IMPORTANTE:
     ☐ Añadir siempre un background blanco porque si no, cargara el pdf en negro
+    Para la base de datos leer este post de stackoverflow
+    https://stackoverflow.com/questions/37652801/when-to-use-interface-and-model-in-typescript-angular2
 TODO:
     ✔ Añadido html2canvas por si en algun futuro lo necestio aunque no tiene tiene pinta ya que con jquery y jspdf va de sobra @done(18-10-19 19:31)
     ☐ Añadir angular material para los inputs.

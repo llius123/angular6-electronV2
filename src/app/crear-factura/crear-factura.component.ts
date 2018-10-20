@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import $ from "jquery";
 import * as jsPDF from 'jspdf'
-import { Router } from '../../../node_modules/@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-factura',
