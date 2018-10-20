@@ -18,12 +18,18 @@ export class CrearFacturaComponent implements OnInit {
 
   pdf() {
     let doc = new jsPDF('p', 'pt', 'a4');
-    doc.addHTML(document.getElementById('pdf'), function () {
+    doc.addHTML(document.getElementById("pdf")).then(canvas => {
+      var img = canvas.toDataURL("image/jpeg", 1.0);
+      doc.addImage(img, 'JPEG',0,0);
+      //document.body.appendChild(canvas);
       doc.save('html.pdf');
-    });
+    })
+    // doc.addHTML(document.body, function () {
+    //   doc.save('html.pdf');
+    // });
   }
 
-  volver(){
+  volver() {
     this.router.navigate(["inicio"])
   }
 }

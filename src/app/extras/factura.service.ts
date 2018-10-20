@@ -26,15 +26,16 @@ export class Factura {
     //     }
     // }
 
-    public clear(): void {
-        this.factura = {
-            numero_factura: null,
-            logotipo: null,
-            fecha_creacion: null,
-            fecha_vencimiento: null,
-            nombre: null
-        }
-    }
+    //Esto tambien sobra
+    // public clear(): void {
+    //     this.factura = {
+    //         numero_factura: null,
+    //         logotipo: null,
+    //         fecha_creacion: null,
+    //         fecha_vencimiento: null,
+    //         nombre: null
+    //     }
+    // }
 
     public getFactura(): iFactura {
         return this.factura
