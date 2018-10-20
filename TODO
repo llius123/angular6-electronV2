@@ -7,4 +7,9 @@ TODO:
     ☐ Crear los objectos factura,direccion etc...
     ☐ Crear una buena estructura de directorios
     ☐ Cuando se cree el pdf hacerlo con un ancho y un alto como los pdf normales
-    
+    ☐ Hacer buenas interfaces y objetos
+
+    Posibles extras:
+        ☐ Guarda facturas.
+        ☐ Listado de facturas.
+        ☐ Guardar facturas en firebase
