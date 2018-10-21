@@ -5,6 +5,8 @@ IMPORTANTE:
     https://stackoverflow.com/questions/37652801/when-to-use-interface-and-model-in-typescript-angular2
 TODO:
     ✔ Añadido html2canvas por si en algun futuro lo necestio aunque no tiene tiene pinta ya que con jquery y jspdf va de sobra @done(18-10-19 19:31)
+    ✔ Arreglado el problema con los pdfs @done(18-10-21 11:02)
+        La libreria que hay que usar es la de jspdf.debug
     ☐ Añadir angular material para los inputs.
     ☐ Crear los objectos factura,direccion etc...
     ☐ Crear una buena estructura de directorios

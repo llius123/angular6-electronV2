@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
-import { Fecha } from "./fecha.service";
+import { Fecha, iFecha } from "./fecha.service";
 
 export interface iFactura {
     numero_factura: number;
-    logotipo: string;
-    fecha_creacion: Fecha;
-    fecha_vencimiento: Fecha;
-    nombre: string
+    //logotipo: string;
+    fecha_creacion: iFecha;
+    fecha_vencimiento: iFecha;
+    //nombre: string
 }
 
 @Injectable()

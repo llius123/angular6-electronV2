@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CrearFacturaComponent } from './crear-factura/crear-factura.component';
 import { AppRoute } from './app.route';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ExportarPdfComponent } from './exportar-pdf/exportar-pdf.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    CrearFacturaComponent
+    CrearFacturaComponent,
+    ExportarPdfComponent
   ],
   imports: [
     AppRoute,
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

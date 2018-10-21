@@ -1,17 +1,57 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" id="pdf">
-  <div class="row">
-    <div class="col-3">
-      <h4>Numero factura:</h4>
+  <form [formGroup]="crear_factura_form">
+    <div class="row">
+      <div class="col-3">
+        <p>Numero factura:</p>
+      </div>
+      <div class="col-3">
+        <input type="text" class="form-control" formControlName="numero_factura">
+      </div>
+      <div class="col-3"></div>
+      <div class="col-3 float-right">
+        <h4>Icono empresa</h4>
+      </div>
     </div>
-    <div class="col-3">
-      <input type="text" class="form-control">
+    <hr />
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-3">
+            <p>Fecha creacion:</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input type="text" class="form-control" formControlName="dia_fecha_creacion">
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" formControlName="mes_fecha_creacion">
+          </div>
+          <div class="col-2">
+            <input type="text" class="form-control" formControlName="anyo_fecha_creacion">
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-3">
+            <p>Fecha vencimiento:</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <input type="text" class="form-control" formControlName="dia_fecha_vencimiento">
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" formControlName="mes_fecha_vencimiento">
+          </div>
+          <div class="col-2">
+            <input type="text" class="form-control" formControlName="anyo_fecha_vencimiento">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-3"></div>
-    <div class="col-3 float-right">
-      <h4>Icono empresa</h4>
-    </div>
-  </div>
-  <button type="button" id="boton" class="btn btn-primary" (click)="pdf()">Crear pdf</button>
+  </form>
+  <button type="button" id="boton" class="btn btn-primary" (click)="crear_factura()">Crear pdf</button>
   <button type="button" id="boton" class="btn btn-primary" (click)="volver()">Volver</button>
 </div>
