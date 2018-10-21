@@ -10,10 +10,12 @@ TODO:
     ☐ Añadir firebase para guardar las facturas generadas @started(18-10-21 13:15)
         ☐ Aprendiendo a usar firebase desde la guia oficial
         https://firebase.google.com/docs/web/setup?hl=es-419
+        Mas documentos --> https://firebase.google.com/docs/reference/node/
         ✔ Añadido npm firebase-admin @done(18-10-21 13:26)
         https://www.npmjs.com/package/firebase-admin
         ✔ Añadido npm firebase @done(18-10-21 13:45)
         https://www.npmjs.com/package/firebase
+        ✔ Añadido npm expressjs/cors/body-parser/nodemon @done(18-10-21 16:52)
 
     ☐ Añadir angular material para los inputs.
     ☐ Crear los objectos factura,direccion etc...

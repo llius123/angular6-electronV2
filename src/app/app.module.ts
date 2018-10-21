@@ -8,6 +8,9 @@ import { AppRoute } from './app.route';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExportarPdfComponent } from './exportar-pdf/exportar-pdf.component';
 import { Factura } from './extras/factura.service';
+import { NewUser } from './sql/newUser.service';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -17,11 +20,13 @@ import { Factura } from './extras/factura.service';
     ExportarPdfComponent
   ],
   imports: [
+    HttpModule,
+    HttpClientModule,
     AppRoute,
     BrowserModule,
     ReactiveFormsModule
   ],
-  providers: [Factura],
+  providers: [Factura,NewUser],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

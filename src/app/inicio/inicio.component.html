@@ -1,5 +1,32 @@
 <div class="container">
   <div class="row">
+    <div class="col-12">
+      <form [formGroup]="logginForm">
+        <div class="row">
+          <div class="col-4">
+            <h4>Usuario</h4>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" formControlName="usuario">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <h4>Password</h4>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" formControlName="pass">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <button (click)="logging()" type="button" class="btn btn-primary">Loggin</button>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-4 mx-auto">
       <button (click)="crearFactura()" type="button" class="btn btn-primary">Crear factura</button>
     </div>

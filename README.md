@@ -9,10 +9,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 "jspdf": "^1.4.1"
 <br />
 "npm-run-all": "^4.1.3"
+<br />
+"firebase"
+<br />
+"firebase-admin"
 
 ## Iniciar aplicación
 
 `npm run s`
+<br />`
+# Server
+<br />
+'npm run nodemon
 
 ## Future
 
