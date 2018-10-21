@@ -1,3 +1,64 @@
-<p>
-  exportar-pdf works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="container" id="pdf">
+        <div class="row">
+          <div class="col-3">
+            <p>Numero factura:</p>
+          </div>
+          <div class="col-3">
+            {{factura.numero_factura}}
+          </div>
+          <div class="col-3"></div>
+          <div class="col-3 float-right">
+            <h4>Icono empresa</h4>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-3">
+                <p>Fecha creacion:</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2">
+                {{factura.fecha_creacion.dia}}
+              </div>
+              <div class="col-3">
+                {{factura.fecha_creacion.mes}}
+              </div>
+              <div class="col-2">
+                {{factura.fecha_creacion.anyo}}
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-3">
+                <p>Fecha vencimiento:</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2">
+                {{factura.fecha_vencimiento.dia}}
+              </div>
+              <div class="col-3">
+                {{factura.fecha_vencimiento.dia}}
+              </div>
+              <div class="col-2">
+                {{factura.fecha_vencimiento.dia}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-12">
+        <button type="button" id="boton" class="btn btn-primary" (click)="crear_factura()">Crear pdf</button>
+        <button type="button" id="boton" class="btn btn-primary" (click)="volver()">Volver</button>
+      </div>
+    </div>
+  </div>

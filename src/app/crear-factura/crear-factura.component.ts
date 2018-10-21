@@ -1,8 +1,5 @@
-import { iFactura } from './../extras/factura.service';
+import { iFactura, Factura } from './../extras/factura.service';
 import { Component, OnInit } from '@angular/core';
-
-import $ from "jquery";
-import * as jsPDF from 'jspdf'
 import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '../../../node_modules/@angular/forms';
 import { iFecha } from '../extras/fecha.service';
@@ -24,7 +21,7 @@ export class CrearFacturaComponent implements OnInit {
     anyo_fecha_vencimiento: new FormControl()
   })
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cFactura: Factura) { }
 
   ngOnInit() {
   }
@@ -48,7 +45,8 @@ export class CrearFacturaComponent implements OnInit {
       fecha_creacion: this.fecha_creacion,
       fecha_vencimiento: this.fecha_vencimiento
     }
-    console.log(this.factura)
+    this.cFactura.setFactura(this.factura);
+    this.router.navigate(["exportarPDF"])
   }
 
   // pdf() {
