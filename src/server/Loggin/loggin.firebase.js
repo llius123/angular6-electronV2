@@ -9,8 +9,8 @@ exports.createUser = function (app, firebase) {
             var errorMessage = error.message;
             console.log(errorCode);
             console.log(errorMessage);
+            res.end();
         });
-        res.end();
     })
 }
 
@@ -33,19 +33,19 @@ exports.loggin = function (app, firebase) {
                 var uid = user.uid;
                 var providerData = user.providerData;
                 const userLogged = {
-                    nombre: displayName,
-                    email: email
+                    email: email,
+                    id: uid
                 }
+                console.log('Loggin correcto');
                 res.send(userLogged);
                 res.end();
             } else {
+                console.log('Loggin icorrecto');
                 mensaje = { 'msg': 'No existe el usuario' };
                 res.send(mensaje);
                 res.end();
             }
         });
-        auth;
-        check;
     }
     )
 }

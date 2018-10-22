@@ -9,8 +9,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ExportarPdfComponent } from './exportar-pdf/exportar-pdf.component';
 import { Factura } from './extras/factura.service';
 import { NewUser } from './sql/newUser.service';
-import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from "@angular/http";
+import { UsuarioLoggeado } from './extras/usuarioLoggeado.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HttpModule } from "@angular/http";
     BrowserModule,
     ReactiveFormsModule
   ],
-  providers: [Factura,NewUser],
+  providers: [Factura,NewUser,UsuarioLoggeado],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

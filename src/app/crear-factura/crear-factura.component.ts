@@ -1,7 +1,7 @@
-import { iFactura, Factura } from './../extras/factura.service';
+import { iFactura, Factura } from '../extras/factura.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl } from '../../../node_modules/@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { iFecha } from '../extras/fecha.service';
 
 @Component({

@@ -1,4 +1,4 @@
-import { iFactura } from './../extras/factura.service';
+import { iFactura } from '../extras/factura.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Factura } from '../extras/factura.service';

@@ -14,29 +14,6 @@ export class Factura {
 
     private factura: iFactura;
 
-    //Sobra?
-    // public create(factura: iFactura): iFactura {
-    //     return
-    //     this.factura = {
-    //         numero_factura: factura.numero_factura,
-    //         logotipo: factura.logotipo,
-    //         fecha_creacion: factura.fecha_creacion,
-    //         fecha_vencimiento: factura.fecha_vencimiento,
-    //         nombre: factura.nombre
-    //     }
-    // }
-
-    //Esto tambien sobra
-    // public clear(): void {
-    //     this.factura = {
-    //         numero_factura: null,
-    //         logotipo: null,
-    //         fecha_creacion: null,
-    //         fecha_vencimiento: null,
-    //         nombre: null
-    //     }
-    // }
-
     public getFactura(): iFactura {
         return this.factura
     }

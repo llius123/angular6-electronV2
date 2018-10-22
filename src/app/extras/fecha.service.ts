@@ -1,4 +1,4 @@
-import { Injectable } from "../../../node_modules/@angular/core";
+import { Injectable } from "@angular/core";
 
 export interface iFecha {
     dia: string;
@@ -10,16 +10,6 @@ export interface iFecha {
 export class Fecha {
 
     private fecha: iFecha;
-
-    //Sobra?
-    // public create(fecha: iFecha): iFecha {
-    //     return
-    //     this.fecha = {
-    //         dia: fecha.dia,
-    //         mes: fecha.mes,
-    //         anyo: fecha.anyo
-    //     }
-    // }
 
     public getFecha(): iFecha{
         return this.fecha;
