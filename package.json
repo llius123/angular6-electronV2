@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "electron": "electron .",
     "electron-build": "ng build --prod && electron .",
-    "nodemon": "nodemon ./src/server/app.js"
+    "nodemon": "nodemon ./src/server/app.js",
+    "debbug": "nodemon --inspect-brk ./src/server/app.js"
   },
   "private": true,
   "dependencies": {
