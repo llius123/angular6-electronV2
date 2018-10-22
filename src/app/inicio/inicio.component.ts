@@ -30,7 +30,17 @@ export class InicioComponent implements OnInit {
       usuario: this.logginForm.get('usuario').value,
       contrasenya: this.logginForm.get('pass').value
     }
-    this.sql.newUser(this.oLoggin).subscribe();
+    this.sql.loggin(this.oLoggin);
+  }
+  registrar(){
+    this.oLoggin = {
+      usuario: this.logginForm.get('usuario').value,
+      contrasenya: this.logginForm.get('pass').value
+    }
+    this.sql.newUser(this.oLoggin);
+  }
+  loggout(){
+    this.sql.loggout();
   }
 
 }

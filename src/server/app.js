@@ -48,3 +48,5 @@ test.users(app);
 
 const newUser = require('./Loggin/loggin.firebase');
 newUser.createUser(app, firebase)
+newUser.loggin(app, firebase);
+newUser.loggout(app, firebase);
