@@ -36,11 +36,9 @@ exports.loggin = function (app, firebase) {
                     email: email,
                     id: uid
                 }
-                console.log('Loggin correcto');
                 res.send(userLogged);
                 res.end();
             } else {
-                console.log('Loggin icorrecto');
                 mensaje = { 'msg': 'No existe el usuario' };
                 res.send(mensaje);
                 res.end();
@@ -51,18 +49,17 @@ exports.loggin = function (app, firebase) {
 }
 
 exports.loggout = function (app, firebase) {
-    const mensaje = {
+    let mensaje = {
         'msg': null
     }
-    app.get('/loggout', (req, res) => {
+    app.get('/loggout', function (req, res) {
         firebase.auth().signOut().then(function () {
-            mensaje.msg = 'Loggout correcto';
+            mensaje.msg = 'Correcto';
             res.send(mensaje);
-            res.end();
         }).catch(function (error) {
-            mensaje.msg = error;
+            mensaje.msg = 'Incorrecto';
             res.send(mensaje);
-            res.end();
         });
+        res.end();
     })
 }
