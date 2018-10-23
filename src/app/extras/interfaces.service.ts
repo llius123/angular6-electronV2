@@ -5,5 +5,5 @@ export interface iLoggin {
 
 export interface iUsuario {
     email: string;
-    id: string;
+    uid: string;
 }

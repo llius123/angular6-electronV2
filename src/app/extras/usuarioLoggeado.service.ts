@@ -9,6 +9,7 @@ export class UsuarioLoggeado {
         return this.usuario;
     }
     setUsuario(usuario: iUsuario){
+        console.log(usuario);
         this.usuario = usuario;
     }
 }

@@ -7,6 +7,14 @@ IMPORTANTE:
     Da igual que el framework sea vue, se aplica tambien a angular
     https://github.com/vuejs/vuefire/issues/18#issuecomment-230316022
     https://basarat.gitbooks.io/typescript/docs/promise.html
+    ☐ Docmuentacion de firebase para saber que objeto devuelve cada metodo
+        ☐ Ejemplo con el caso de loggin:
+        Metodo utilizado para loggea
+            https://firebase.google.com/docs/reference/js/firebase.auth.Auth
+        Que objeto devuelve al loggear
+            https://firebase.google.com/docs/reference/js/firebase.Promise
+        Como controlar el promise
+            https://basarat.gitbooks.io/typescript/docs/promise.html
 TODO:
     ✔ Añadido html2canvas por si en algun futuro lo necestio aunque no tiene tiene pinta ya que con jquery y jspdf va de sobra @done(18-10-19 19:31)
     ✔ Arreglado el problema con los pdfs @done(18-10-21 11:02)
