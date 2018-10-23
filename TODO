@@ -11,6 +11,9 @@ TODO:
     ✔ Añadido html2canvas por si en algun futuro lo necestio aunque no tiene tiene pinta ya que con jquery y jspdf va de sobra @done(18-10-19 19:31)
     ✔ Arreglado el problema con los pdfs @done(18-10-21 11:02)
         La libreria que hay que usar es la de jspdf.debug
+    ✔ Se supone que intalando esto no necesito nodejs para entrar en la base de datos @done(18-10-23 09:52)
+        No necesito nodejs asiq eu voy a eliminar todo lo relacionado con node
+        https://www.npmjs.com/package/@angular/fire
     ☐ Añadir firebase para guardar las facturas generadas @started(18-10-21 13:15)
         Super importante la documentacion de la api 
         https://firebase.google.com/docs/reference/js/firebase.auth.Auth
