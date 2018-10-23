@@ -33,11 +33,14 @@ export class InicioComponent implements OnInit {
       usuario: this.logginForm.get('usuario').value,
       contrasenya: this.logginForm.get('pass').value
     }
-    this.auth.auth.signInWithEmailAndPassword(this.oLoggin.usuario,this.oLoggin.contrasenya);
-    this.auth.auth.onAuthStateChanged(function (user){
-      var email = user.email;
-      var uid = user.uid;
-      console.log(email,uid);
+    this.auth.auth.signInWithEmailAndPassword(this.oLoggin.usuario,this.oLoggin.contrasenya).then(() => {
+      this.auth.auth.onAuthStateChanged(function (user) {
+        var email = user.email;
+        var uid = user.uid;
+        console.log(email, uid);
+      })
+    }).catch((error) => {
+      console.log(error);
     })
   }
   registrar(){
