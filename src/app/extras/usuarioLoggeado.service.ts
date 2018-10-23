@@ -12,4 +12,7 @@ export class UsuarioLoggeado {
         console.log(usuario);
         this.usuario = usuario;
     }
+    clear(){
+        this.usuario = null;
+    }
 }

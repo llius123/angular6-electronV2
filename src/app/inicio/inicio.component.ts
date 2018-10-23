@@ -34,6 +34,7 @@ export class InicioComponent implements OnInit {
   oLoggin: iLoggin;
   oUsuario: iUsuario;
   usuarioLoggeado: UsuarioLoggeado = new UsuarioLoggeado();
+
   logging() {
     this.oLoggin = {
       usuario: this.logginForm.get('usuario').value,
@@ -42,15 +43,16 @@ export class InicioComponent implements OnInit {
     this.auth.auth.signInWithEmailAndPassword(this.oLoggin.usuario, this.oLoggin.contrasenya).then(
       () => {
         this.auth.auth.onAuthStateChanged((user) => {
-          this.oUsuario = {
-            email: user.email,
-            uid: user.uid
+          if(user){
+            this.oUsuario = {
+              email: user.email,
+              uid: user.uid
+            }
+            this.usuarioLoggeado.setUsuario(this.oUsuario);
           }
-          this.usuarioLoggeado.setUsuario(this.oUsuario);
         })
       }
-    )
-      .catch((error) => {
+    ).catch((error) => {
         console.log(error);
       })
   }
@@ -59,11 +61,29 @@ export class InicioComponent implements OnInit {
       usuario: this.logginForm.get('usuario').value,
       contrasenya: this.logginForm.get('pass').value
     }
+    this.auth.auth.createUserWithEmailAndPassword(this.oLoggin.usuario,this.oLoggin.contrasenya).catch(
+      (error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      }
+    ).then(
+      () => {
+        console.log('Usuario creado correctamente');
+      }
+    )
   }
-  items: any;
   loggout() {
-    this.items = this.db.collection('usuarios');
-    console.log(this.items);
+    this.auth.auth.signOut().then(
+      () => {
+        console.log('Loggout correcto');
+        this.usuarioLoggeado.clear();
+      }
+    ).catch(
+      (error) => {
+        console.log(error);
+      }
+    )
   }
 
 }
